@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.DepositController">
+   <children>
+      <Button fx:id="infoButton" layoutX="21.0" layoutY="80.0" mnemonicParsing="false" onAction="#switchToInformation" prefHeight="23.0" prefWidth="96.0" text="Information" />
+      <Button fx:id="depButton" layoutX="21.0" layoutY="118.0" mnemonicParsing="false" onAction="#switchToDeposit" prefHeight="23.0" prefWidth="96.0" text="Deposit" />
+      <Button fx:id="tranButton" layoutX="21.0" layoutY="162.0" mnemonicParsing="false" onAction="#switchToTransaction" prefHeight="23.0" prefWidth="96.0" text="Transaction" />
+      <Button fx:id="taskButton" layoutX="21.0" layoutY="200.0" mnemonicParsing="false" onAction="#switchToTasks" prefHeight="23.0" prefWidth="96.0" text="Tasks" />
+      <Button fx:id="leadButton" layoutX="21.0" layoutY="244.0" mnemonicParsing="false" onAction="#switchToLeaderboard" prefHeight="23.0" prefWidth="96.0" text="Leaderboard" />
+      <Button fx:id="finButton" layoutX="21.0" layoutY="285.0" mnemonicParsing="false" onAction="#switchToFinancing" prefHeight="23.0" prefWidth="96.0" text="Financing" />
+      <Button fx:id="loutButton" layoutX="504.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="42.0" prefWidth="72.0" text="log out-&gt;" />
+      <ImageView fx:id="kids" fitHeight="59.0" fitWidth="74.0" layoutX="36.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@kids.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mashroom" fitHeight="72.0" fitWidth="111.0" layoutX="35.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@mashroom.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mario" fitHeight="81.0" fitWidth="80.0" layoutX="160.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@mario.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dahaozi" fitHeight="81.0" fitWidth="80.0" layoutX="309.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@dahaozi.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="haozi" fitHeight="81.0" fitWidth="87.0" layoutX="464.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@haozi.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="payerAccount" layoutX="250.0" layoutY="118.0" prefHeight="23.0" prefWidth="243.0" promptText="payerAccount" />
+      <TextField fx:id="transAmount" layoutX="250.0" layoutY="244.0" prefHeight="23.0" prefWidth="243.0" promptText="transAmount" />
+      <TextField fx:id="payee" layoutX="250.0" layoutY="200.0" prefHeight="23.0" prefWidth="243.0" promptText="payee" />
+      <TextField fx:id="recipentAccount" layoutX="250.0" layoutY="162.0" prefHeight="23.0" prefWidth="243.0" promptText="recipentAccount" />
+      <Text layoutX="148.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="payer account" />
+      <Text layoutX="148.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="recipent account" />
+      <Text layoutX="148.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="payee" />
+      <Text layoutX="148.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="amount" />
+      <Button fx:id="submitApply" layoutX="372.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleSubmitApply" text="submit apply" />
+   </children>
+</Pane>
+

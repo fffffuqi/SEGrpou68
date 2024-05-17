@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+            fx:controller="com.example.loginController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <VBox alignment="CENTER" layoutX="100.0" layoutY="50.0" spacing="10.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+            <children>
+                <Label text="Virtual Bank Application for Kids" style="-fx-font-size: 20px;"/>
+                <TextField fx:id="accountField" promptText="Account" />
+                <PasswordField fx:id="passwordField" promptText="Password" />
+                <HBox alignment="CENTER" spacing="10.0">
+                    <children>
+                        <RadioButton fx:id="parentRadio" text="I am parent">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="userTypeGroup" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="childRadio" text="I am kid" toggleGroup="$userTypeGroup" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" spacing="10.0">
+                    <children>
+                        <Button fx:id="signupButton" text="Sign Up" onAction="#handleSignup"/>
+                        <Button fx:id="loginButton" text="Log In" onAction="#handleLogin"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
