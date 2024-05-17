@@ -1,0 +1,58 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:fx="http://javafx.com/fxml"
+           targetNamespace="http://javafx.com/fxml"
+           elementFormDefault="qualified">
+
+    <xs:element name="AnchorPane" type="fx:PaneType"/>
+    <xs:element name="VBox" type="fx:PaneType"/>
+    <xs:element name="HBox" type="fx:PaneType"/>
+    <xs:element name="GridPane" type="fx:PaneType"/>
+    <xs:element name="StackPane" type="fx:PaneType"/>
+    <xs:element name="BorderPane" type="fx:PaneType"/>
+    <xs:element name="Pane" type="fx:PaneType"/>
+    <xs:element name="Button" type="fx:ControlType"/>
+    <xs:element name="Label" type="fx:ControlType"/>
+    <xs:element name="TextField" type="fx:ControlType"/>
+    <xs:element name="TextArea" type="fx:ControlType"/>
+    <xs:element name="ImageView" type="fx:ControlType"/>
+    <xs:element name="TableView" type="fx:ControlType"/>
+    <xs:element name="TreeView" type="fx:ControlType"/>
+    <xs:element name="ListView" type="fx:ControlType"/>
+    <xs:element name="MenuBar" type="fx:ControlType"/>
+    <xs:element name="ToolBar" type="fx:ControlType"/>
+    <xs:element name="Slider" type="fx:ControlType"/>
+    <xs:element name="ProgressBar" type="fx:ControlType"/>
+    <xs:element name="ProgressIndicator" type="fx:ControlType"/>
+    <xs:element name="CheckBox" type="fx:ControlType"/>
+    <xs:element name="RadioButton" type="fx:ControlType"/>
+    <xs:element name="ComboBox" type="fx:ControlType"/>
+    <xs:element name="ChoiceBox" type="fx:ControlType"/>
+    <xs:element name="Hyperlink" type="fx:ControlType"/>
+    <xs:element name="Image" type="fx:ImageType"/>
+
+    <xs:complexType name="PaneType">
+        <xs:sequence>
+            <xs:element name="children" minOccurs="0" maxOccurs="unbounded" type="xs:anyType"/>
+        </xs:sequence>
+        <xs:attribute name="prefHeight" type="xs:double"/>
+        <xs:attribute name="prefWidth" type="xs:double"/>
+        <xs:attribute name="layoutX" type="xs:double"/>
+        <xs:attribute name="layoutY" type="xs:double"/>
+    </xs:complexType>
+
+    <xs:complexType name="ControlType">
+        <xs:complexContent>
+            <xs:extension base="fx:PaneType">
+                <xs:attribute name="text" type="xs:string"/>
+                <xs:attribute name="onAction" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ImageType">
+        <xs:attribute name="url" type="xs:string"/>
+        <xs:attribute name="width" type="xs:double"/>
+        <xs:attribute name="height" type="xs:double"/>
+    </xs:complexType>
+
+</xs:schema>
